@@ -98,7 +98,7 @@ Make_matrix_plot <- function(Mat_data,Set_size_data, Main_bar_data, point_size, 
                   + scale_y_continuous(breaks = c(1:nrow(Set_size_data)),
                                        limits = c(0.5,(nrow(Set_size_data) +0.5)),
                                        labels = labels, expand = c(0,0))
-                  + scale_x_continuous(limits = c(1,nrow(Main_bar_data)), expand = c(0,0))
+                  + scale_x_continuous(limits = c(1,nrow(Main_bar_data)))
                   + geom_rect(data = shading_data, aes_string(xmin = "min", xmax = "max",
                                                               ymin = "y_min", ymax = "y_max"),
                               fill = shading_data$shade_color, alpha = shade_alpha)
